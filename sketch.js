@@ -1,12 +1,14 @@
 
-//const Engine = Matter.Engine;
-//const World = Matter.World;
-//const Bodies = Matter.Bodies;
-//const Body = Matter.Body;
+// const Engine = Matter.Engine;
+// const World = Matter.World;
+// const Bodies = Matter.Bodies;
+// const Body = Matter.Body;
 
 var block1, block2, block3, block4, block5, blcok6, block7, block8, block9, stone, platform;
 
 var stoneImg;
+
+var slingshot;
 
 function preload() {
     stoneImg = loadImage("sprite/polygon.png");
@@ -46,9 +48,11 @@ function draw() {
 
 }
 
-function mouseDragged(){
+function mouseDragged() {
 	Matter.Body.setPosition(stone.body,{x:mouseX,y:mouseY});
-	}
+}
 	
 	function mouseReleased(){
 	slingshot.fly();
+    console.log("bob");
+    }
